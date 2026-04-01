@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Point | Barafka ugu Tayada Sarreeya Muqdisho</title>
+    <style>
+        :root {
+            --primary-blue: #0077b6;
+            --secondary-blue: #00b4d8;
+            --dark-blue: #03045e;
+            --light-bg: #f8fdff;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            color: var(--primary-blue);
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #555;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0,119,182,0.9), rgba(0,180,216,0.8)), 
+                        url('https://images.unsplash.com/photo-1551033541-2075d603463b?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .hero h2 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .btn {
+            background-color: var(--white);
+            color: var(--primary-blue);
+            padding: 14px 35px;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: 0.3s transform;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background-color: #f0f0f0;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .services h2 {
+            color: var(--dark-blue);
+            margin-bottom: 40px;
+            font-size: 32px;
+            position: relative;
+        }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #edf2f7;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,119,182,0.1);
+        }
+
+        .card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #25D366;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero {
+                padding: 80px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🧊 Ice Point</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Adeegyada</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Baraf Nadiif ah & Joogto ah</h2>
+        <p>Maqaayadaha iyo Hoteelada Muqdisho, waxaan u keennaa barafka ugu tayada sarreeya oo laga soo saaro mashiino casri ah.</p>
+        <a href="#contact" class="btn">Dalbo Hadda</a>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Maxaan Bixinaa?</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>💎 Tayada Sare</h3>
+                <p>Barafkeenu waa mid saafi ah (Crystal Clear), waxaana laga sifeeyay wasakh kasta si uu ugu haboonaado cabitaanka.</p>
+            </div>
+            <div class="card">
+                <h3>🚚 Adeeg Degdeg ah</h3>
+                <p>Nidaamka gaarsiinta (Delivery) ayaa u diyaarsan inuu kuugu keeno goobtaada waqti kooban gudahood.</p>
+            </div>
+            <div class="card">
+                <h3>🤝 Heshiisyo Bille ah</h3>
+                <p>Maqaayadaha waxaan la galnaa heshiisyo gaar ah oo qiimo dhimis leh iyo bixinta joogtada ah.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Xiriirka Ganacsiga</h2>
+        <p style="margin-top: 10px;">📍 Muqdisho, Soomaaliya</p>
+        <p>📞 +252 611 197114</p>
+        <a href="https://wa.me/252611197114" class="whatsapp-btn">Kala hadal WhatsApp</a>
+        <p style="margin-top: 30px; font-size: 14px; opacity: 0.6;">&copy; 2026 Ice Point. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
